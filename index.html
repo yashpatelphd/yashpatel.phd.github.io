@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academic Portfolio</title>
+
+  <!-- favicon -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!-- custom css link -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- google font link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Your Name" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Your Name">Your Name</h1>
+
+          <p class="title">Researcher / Academic</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:you@example.com" class="contact-link">you@example.com</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+              <a href="tel:+910000000000" class="contact-link">+91 00000 00000</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="logo-google"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Google Scholar</p>
+              <a href="#" class="contact-link">View Profile</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>Ahmedabad, Gujarat, India</address>
+            </div>
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Research</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Journey</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Recognition</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Community</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            I'm a researcher and academic based in Ahmedabad, India. My work spans
+            [your fields of interest], where I focus on turning hard problems into
+            rigorous, well-communicated contributions.
+          </p>
+
+          <p>
+            This is placeholder text — replace it with a short narrative of who you are,
+            what drives your research, and the through-line that connects your work. Keep
+            it to two or three concise paragraphs.
+          </p>
+        </section>
+
+
+        <!--
+          - research focus (reuses the "service" layout)
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">Research focus</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <ion-icon name="flask-outline" style="font-size: 34px; color: var(--orange-yellow-crayola);"></ion-icon>
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Area One</h4>
+                <p class="service-item-text">
+                  One-line description of your first major research theme.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <ion-icon name="analytics-outline" style="font-size: 34px; color: var(--orange-yellow-crayola);"></ion-icon>
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Area Two</h4>
+                <p class="service-item-text">
+                  One-line description of your second major research theme.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <ion-icon name="bulb-outline" style="font-size: 34px; color: var(--orange-yellow-crayola);"></ion-icon>
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Area Three</h4>
+                <p class="service-item-text">
+                  One-line description of your third major research theme.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <ion-icon name="globe-outline" style="font-size: 34px; color: var(--orange-yellow-crayola);"></ion-icon>
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Area Four</h4>
+                <p class="service-item-text">
+                  One-line description of your fourth major research theme.
+                </p>
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+      <!--
+        - #RESEARCH
+      -->
+
+      <article class="portfolio" data-page="research">
+
+        <header>
+          <h2 class="h2 article-title">Research</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+            <li class="filter-item"><button class="active" data-filter-btn>All</button></li>
+            <li class="filter-item"><button data-filter-btn>Publications</button></li>
+            <li class="filter-item"><button data-filter-btn>Patents</button></li>
+            <li class="filter-item"><button data-filter-btn>Copyrights</button></li>
+            <li class="filter-item"><button data-filter-btn>Projects</button></li>
+          </ul>
+
+          <div class="filter-select-box">
+            <button class="filter-select" data-select>
+              <div class="select-value" data-selecct-value>Select category</div>
+              <div class="select-icon"><ion-icon name="chevron-down"></ion-icon></div>
+            </button>
+
+            <ul class="select-list">
+              <li class="select-item"><button data-select-item>All</button></li>
+              <li class="select-item"><button data-select-item>Publications</button></li>
+              <li class="select-item"><button data-select-item>Patents</button></li>
+              <li class="select-item"><button data-select-item>Copyrights</button></li>
+              <li class="select-item"><button data-select-item>Projects</button></li>
+            </ul>
+          </div>
+
+          <!-- PUBLICATIONS subsection -->
+          <h3 class="h3 research-subtitle" data-filter-item data-category="publications">Publications</h3>
+
+          <ul class="research-list">
+
+            <li class="research-entry content-card" data-filter-item data-category="publications">
+              <span class="research-badge">Journal</span>
+              <h4 class="h4 research-entry-title">Title of the journal article goes here</h4>
+              <p class="research-entry-meta">Author A, <strong>Your Name</strong>, Author C — <em>Journal Name</em>, Vol. X, 2024.</p>
+              <p class="timeline-text">Short summary of the contribution. Replace with your abstract snippet or key result. <a href="#" class="research-doi">DOI / PDF</a></p>
+            </li>
+
+            <li class="research-entry content-card" data-filter-item data-category="publications">
+              <span class="research-badge">Conference</span>
+              <h4 class="h4 research-entry-title">Title of the conference paper goes here</h4>
+              <p class="research-entry-meta"><strong>Your Name</strong>, Author B — <em>Proceedings of Conference</em>, 2023.</p>
+              <p class="timeline-text">Short summary of the contribution. <a href="#" class="research-doi">DOI / PDF</a></p>
+            </li>
+
+            <li class="research-entry content-card" data-filter-item data-category="publications">
+              <span class="research-badge">Book Chapter</span>
+              <h4 class="h4 research-entry-title">Title of the book chapter goes here</h4>
+              <p class="research-entry-meta"><strong>Your Name</strong> — In <em>Book Title</em>, Publisher, 2022.</p>
+              <p class="timeline-text">Short summary of the chapter. <a href="#" class="research-doi">Link</a></p>
+            </li>
+
+          </ul>
+
+          <!-- PATENTS subsection -->
+          <h3 class="h3 research-subtitle" data-filter-item data-category="patents">Patents</h3>
+
+          <ul class="research-list">
+            <li class="research-entry content-card" data-filter-item data-category="patents">
+              <span class="research-badge">Patent</span>
+              <h4 class="h4 research-entry-title">Title of the patent</h4>
+              <p class="research-entry-meta">Application No. XXXXXX — Status: Filed / Granted, 2023.</p>
+              <p class="timeline-text">Brief description of the invention.</p>
+            </li>
+          </ul>
+
+          <!-- COPYRIGHTS subsection -->
+          <h3 class="h3 research-subtitle" data-filter-item data-category="copyrights">Copyrights</h3>
+
+          <ul class="research-list">
+            <li class="research-entry content-card" data-filter-item data-category="copyrights">
+              <span class="research-badge">Copyright</span>
+              <h4 class="h4 research-entry-title">Title of the copyrighted work</h4>
+              <p class="research-entry-meta">Registration No. XXXXXX — 2022.</p>
+              <p class="timeline-text">Brief description of the work.</p>
+            </li>
+          </ul>
+
+          <!-- PROJECTS subsection -->
+          <h3 class="h3 research-subtitle" data-filter-item data-category="projects">Projects</h3>
+
+          <ul class="research-list">
+            <li class="research-entry content-card" data-filter-item data-category="projects">
+              <span class="research-badge">Project</span>
+              <h4 class="h4 research-entry-title">Title of the research project</h4>
+              <p class="research-entry-meta">Role: Principal Investigator — 2021–2023.</p>
+              <p class="timeline-text">Brief description of the project, funding source, and outcomes. <a href="#" class="research-doi">Repository / Link</a></p>
+            </li>
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+      <!--
+        - #PROFESSIONAL JOURNEY
+      -->
+
+      <article class="resume" data-page="journey">
+
+        <header>
+          <h2 class="h2 article-title">Professional Journey</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="school-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Ph.D. in [Field]</h4>
+              <span>20XX — 20XX</span>
+              <p class="timeline-text">University Name, City. Thesis: "Title of your dissertation."</p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">M.S. / M.Tech in [Field]</h4>
+              <span>20XX — 20XX</span>
+              <p class="timeline-text">University Name, City. Specialization and notable distinctions.</p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">B.E. / B.Tech in [Field]</h4>
+              <span>20XX — 20XX</span>
+              <p class="timeline-text">University Name, City.</p>
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="briefcase-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Current Position</h4>
+              <span>20XX — Present</span>
+              <p class="timeline-text">Organization Name. Brief description of your role and responsibilities.</p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Previous Position</h4>
+              <span>20XX — 20XX</span>
+              <p class="timeline-text">Organization Name. Brief description of your role and responsibilities.</p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Earlier Position</h4>
+              <span>20XX — 20XX</span>
+              <p class="timeline-text">Organization Name. Brief description of your role and responsibilities.</p>
+            </li>
+
+          </ol>
+
+        </section>
+
+      </article>
+
+
+
+
+      <!--
+        - #RECOGNITION
+      -->
+
+      <article class="resume" data-page="recognition">
+
+        <header>
+          <h2 class="h2 article-title">Recognition</h2>
+        </header>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box"><ion-icon name="trophy-outline"></ion-icon></div>
+            <h3 class="h3">Awards</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Name of Award</h4>
+              <span>20XX</span>
+              <p class="timeline-text">Awarding body. One line on what it recognized.</p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Name of Award</h4>
+              <span>20XX</span>
+              <p class="timeline-text">Awarding body. One line on what it recognized.</p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box"><ion-icon name="cash-outline"></ion-icon></div>
+            <h3 class="h3">Research Grants</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Grant / Funding Title</h4>
+              <span>20XX — 20XX</span>
+              <p class="timeline-text">Funding agency, amount, and your role (PI / Co-PI).</p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box"><ion-icon name="mic-outline"></ion-icon></div>
+            <h3 class="h3">Invited Talks</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Talk Title</h4>
+              <span>20XX</span>
+              <p class="timeline-text">Venue / Event, City. Brief context.</p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box"><ion-icon name="newspaper-outline"></ion-icon></div>
+            <h3 class="h3">Media Mentions</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Headline or Feature Title</h4>
+              <span>20XX</span>
+              <p class="timeline-text">Outlet name. <a href="#" class="research-doi">Read</a></p>
+            </li>
+          </ol>
+        </section>
+
+      </article>
+
+
+
+
+      <!--
+        - #COMMUNITY
+      -->
+
+      <article class="resume" data-page="community">
+
+        <header>
+          <h2 class="h2 article-title">Community</h2>
+        </header>
+
+        <section class="about-text" style="margin-bottom: 20px;">
+          <p>Leadership &amp; service across the research community.</p>
+        </section>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box"><ion-icon name="heart-outline"></ion-icon></div>
+            <h3 class="h3">Volunteering</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Volunteer Role</h4>
+              <span>20XX — 20XX</span>
+              <p class="timeline-text">Organization. What you contributed.</p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box"><ion-icon name="people-outline"></ion-icon></div>
+            <h3 class="h3">Professional Memberships</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Member, Society Name</h4>
+              <span>20XX — Present</span>
+              <p class="timeline-text">Membership grade / number if relevant.</p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box"><ion-icon name="reader-outline"></ion-icon></div>
+            <h3 class="h3">Conference Reviewing</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Reviewer, Conference / Journal Name</h4>
+              <span>20XX — Present</span>
+              <p class="timeline-text">Track or area you review for.</p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box"><ion-icon name="git-network-outline"></ion-icon></div>
+            <h3 class="h3">Mentoring</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Mentor / Supervisor</h4>
+              <span>20XX — Present</span>
+              <p class="timeline-text">Students or programs you've mentored.</p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box"><ion-icon name="megaphone-outline"></ion-icon></div>
+            <h3 class="h3">Outreach Activities</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Outreach Initiative</h4>
+              <span>20XX</span>
+              <p class="timeline-text">Description of the activity and its impact.</p>
+            </li>
+          </ol>
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+
+
+  <!-- custom js link -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- ionicon link -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
