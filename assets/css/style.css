@@ -1940,3 +1940,20 @@ textarea.form-input::-webkit-resizer { display: none; }
   border-radius: 0 !important;
   box-shadow: none !important;
 }
+
+.service-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.service-icon-box {
+  margin-bottom: 0;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.service-content-box {
+  text-align: left;
+}
