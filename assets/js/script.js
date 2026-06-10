@@ -125,7 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!emailLink) return;
 
-  const email = "contact@yashpatel.phd";
+  const email = "yashpatelphd@gmail.com";
   let revealed = false;
   let hideTimer = null;
 
