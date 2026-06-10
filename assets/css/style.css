@@ -1934,7 +1934,9 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .research-doi:hover { text-decoration: underline; }
 
-.avatar-box {
-  background: transparent;
-  border-radius: 0;
+.avatar-box,
+.avatar-box img {
+  background: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
 }
