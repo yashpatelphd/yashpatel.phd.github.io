@@ -120,43 +120,55 @@ for (let i = 0; i < navigationLinks.length; i++) {
 }
 
 // EMAIL REVEAL & COPY
-const emailLink = document.getElementById("emailLink");
+document.addEventListener("DOMContentLoaded", () => {
+  const emailLink = document.getElementById("emailLink");
 
-if (emailLink) {
-  const email = "contact" + "@" + "yashpatel.phd";
+  if (!emailLink) return;
 
+  const email = "contact@yashpatel.phd";
   let revealed = false;
-  let hideTimer;
+  let hideTimer = null;
 
-  emailLink.addEventListener("click", async function (e) {
+  emailLink.addEventListener("click", async (e) => {
     e.preventDefault();
 
+    // First click: reveal email
     if (!revealed) {
       revealed = true;
-      this.textContent = email;
+      emailLink.textContent = email;
+      emailLink.title = "Click again to copy";
 
       hideTimer = setTimeout(() => {
-        this.textContent = "Click to reveal email";
+        emailLink.textContent = "Click to reveal email";
+        emailLink.title = "";
         revealed = false;
       }, 5000);
 
       return;
     }
 
+    // Second click: copy email
     try {
       await navigator.clipboard.writeText(email);
 
       clearTimeout(hideTimer);
 
-      this.textContent = "✓ Copied!";
+      emailLink.textContent = "✓ Copied!";
 
       setTimeout(() => {
-        this.textContent = "Click to reveal email";
+        emailLink.textContent = "Click to reveal email";
+        emailLink.title = "";
         revealed = false;
       }, 1500);
 
-    } catch (err) {
-      console.error(err);
+    } catch (error) {
+      console.error("Copy failed:", error);
+
+      // Fallback for older browsers
+      prompt("Copy this email:", email);
+
+      emailLink.textContent = "Click to reveal email";
+      revealed = false;
     }
   });
-}
+});
