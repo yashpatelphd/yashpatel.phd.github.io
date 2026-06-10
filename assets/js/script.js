@@ -118,3 +118,45 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+// EMAIL REVEAL & COPY
+const emailLink = document.getElementById("emailLink");
+
+if (emailLink) {
+  const email = "contact" + "@" + "yashpatel.phd";
+
+  let revealed = false;
+  let hideTimer;
+
+  emailLink.addEventListener("click", async function (e) {
+    e.preventDefault();
+
+    if (!revealed) {
+      revealed = true;
+      this.textContent = email;
+
+      hideTimer = setTimeout(() => {
+        this.textContent = "Click to reveal email";
+        revealed = false;
+      }, 5000);
+
+      return;
+    }
+
+    try {
+      await navigator.clipboard.writeText(email);
+
+      clearTimeout(hideTimer);
+
+      this.textContent = "✓ Copied!";
+
+      setTimeout(() => {
+        this.textContent = "Click to reveal email";
+        revealed = false;
+      }, 1500);
+
+    } catch (err) {
+      console.error(err);
+    }
+  });
+}
