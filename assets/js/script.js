@@ -216,3 +216,27 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 })();
+
+// ===== BIBTEX COPY =====
+(function () {
+  document.querySelectorAll(".research-bib-btn").forEach(btn => {
+    btn.addEventListener("click", async (e) => {
+      e.preventDefault();
+      const entry = btn.closest(".research-entry");
+      const bib = entry?.dataset.bibtex;
+      if (!bib) return;
+      try {
+        await navigator.clipboard.writeText(bib);
+        const original = btn.innerHTML;
+        btn.classList.add("copied");
+        btn.innerHTML = '<ion-icon name="checkmark-outline"></ion-icon> Copied';
+        setTimeout(() => {
+          btn.classList.remove("copied");
+          btn.innerHTML = original;
+        }, 1500);
+      } catch (err) {
+        prompt("Copy this BibTeX:", bib);
+      }
+    });
+  });
+})();
