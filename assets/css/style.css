@@ -2056,3 +2056,46 @@ textarea.form-input::-webkit-resizer { display: none; }
   .research-filter-list { display: flex; }
   .research-select-box { display: none; }
 }
+
+/* publication sub-filter */
+.pub-subfilter-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+.pub-subfilter-btn {
+  background: var(--eerie-black-2);
+  color: var(--light-gray);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-400);
+  padding: 6px 14px;
+  border: 1px solid var(--jet);
+  border-radius: 20px;
+  transition: var(--transition-1);
+}
+.pub-subfilter-btn:hover { color: var(--orange-yellow-crayola); border-color: var(--orange-yellow-crayola); }
+.pub-subfilter-btn.active {
+  color: var(--smoky-black);
+  background: var(--text-gradient-yellow);
+  border-color: transparent;
+  font-weight: var(--fw-500);
+}
+
+.pub-sub.is-hidden { display: none; }
+
+/* ID chip next to badge */
+.research-entry > .research-badge { margin-right: 6px; }
+.research-id {
+  display: inline-block;
+  font-size: var(--fs-8);
+  font-weight: var(--fw-600);
+  color: var(--orange-yellow-crayola);
+  background: var(--eerie-black-2);
+  border: 1px solid var(--jet);
+  padding: 3px 8px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+  vertical-align: top;
+}
