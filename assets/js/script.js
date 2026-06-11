@@ -172,3 +172,30 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+// ===== RESEARCH SECTION FILTER =====
+(function () {
+  const groups = document.querySelectorAll("[data-research-group]");
+  const filterBtns = document.querySelectorAll(".research-filter-btn");
+  const selectBtn = document.querySelector("[data-research-select]");
+  const selectValue = document.querySelector("[data-research-select-value]");
+  const selectItems = document.querySelectorAll(".research-select-item");
+
+  if (!groups.length) return;
+
+  function applyFilter(value, label) {
+    groups.forEach(g => {
+      const match = value === "all" || g.dataset.researchGroup === value;
+      g.classList.toggle("is-hidden", !match);
+    });
+    filterBtns.forEach(b => b.classList.toggle("active", b.dataset.researchFilter === value));
+    if (selectValue && label) selectValue.textContent = label;
+  }
+
+  filterBtns.forEach(b => b.addEventListener("click", () => applyFilter(b.dataset.researchFilter, b.textContent)));
+  if (selectBtn) selectBtn.addEventListener("click", () => selectBtn.classList.toggle("active"));
+  selectItems.forEach(item => item.addEventListener("click", () => {
+    applyFilter(item.dataset.researchFilter, item.textContent);
+    if (selectBtn) selectBtn.classList.remove("active");
+  }));
+})();
