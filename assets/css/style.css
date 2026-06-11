@@ -2084,41 +2084,23 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .pub-sub.is-hidden { display: none; }
 
-/* distinct badge colors (override yellow Journal) */
-.badge-journal   { background: hsl(210, 75%, 62%); color: var(--white-1); }   /* blue */
-.badge-conf      { background: hsl(170, 60%, 50%); color: var(--smoky-black); } /* teal */
-.badge-book      { background: hsl(280, 50%, 65%); color: var(--white-1); }   /* purple */
-.badge-patent    { background: hsl(15, 80%, 60%);  color: var(--white-1); }   /* coral */
-.badge-copyright { background: hsl(45, 100%, 60%); color: var(--smoky-black); } /* gold */
-.badge-project   { background: hsl(120, 40%, 55%); color: var(--white-1); }   /* green */
+/* warm light badge palette — black text */
+.badge-journal   { background: hsl(38, 95%, 75%);  color: var(--smoky-black); } /* warm gold */
+.badge-conf      { background: hsl(170, 55%, 75%); color: var(--smoky-black); } /* soft mint */
+.badge-book      { background: hsl(280, 50%, 82%); color: var(--smoky-black); } /* soft lavender */
+.badge-patent    { background: hsl(20, 90%, 78%);  color: var(--smoky-black); } /* warm peach */
+.badge-copyright { background: hsl(50, 95%, 75%);  color: var(--smoky-black); } /* warm cream */
+.badge-project   { background: hsl(140, 50%, 78%); color: var(--smoky-black); } /* soft sage */
 
-/* ID chip matches badge */
-.research-entry > .research-badge { margin-right: 6px; }
-.research-id {
-  display: inline-block;
-  font-size: var(--fs-8);
-  font-weight: var(--fw-600);
-  padding: 3px 9px;
-  border-radius: 8px;
-  margin-bottom: 10px;
-  letter-spacing: 0.6px;
-  vertical-align: top;
-  font-family: 'Poppins', monospace;
-}
-.id-journal   { background: hsla(210, 75%, 62%, 0.18); color: hsl(210, 80%, 72%); border: 1px solid hsla(210, 75%, 62%, 0.4); }
-.id-conf      { background: hsla(170, 60%, 50%, 0.18); color: hsl(170, 65%, 60%); border: 1px solid hsla(170, 60%, 50%, 0.4); }
-.id-book      { background: hsla(280, 50%, 65%, 0.18); color: hsl(280, 60%, 75%); border: 1px solid hsla(280, 50%, 65%, 0.4); }
-.id-patent    { background: hsla(15, 80%, 60%, 0.18);  color: hsl(15, 85%, 70%);  border: 1px solid hsla(15, 80%, 60%, 0.4); }
-.id-copyright { background: hsla(45, 100%, 60%, 0.18); color: hsl(45, 100%, 70%); border: 1px solid hsla(45, 100%, 60%, 0.4); }
-.id-project   { background: hsla(120, 40%, 55%, 0.18); color: hsl(120, 45%, 65%); border: 1px solid hsla(120, 40%, 55%, 0.4); }
+/* ID chips — same warm family, tinted */
+.id-journal   { background: hsla(38, 95%, 75%, 0.22);  color: hsl(38, 95%, 78%);  border: 1px solid hsla(38, 95%, 75%, 0.5); }
+.id-conf      { background: hsla(170, 55%, 75%, 0.22); color: hsl(170, 60%, 75%); border: 1px solid hsla(170, 55%, 75%, 0.5); }
+.id-book      { background: hsla(280, 50%, 82%, 0.22); color: hsl(280, 55%, 82%); border: 1px solid hsla(280, 50%, 82%, 0.5); }
+.id-patent    { background: hsla(20, 90%, 78%, 0.22);  color: hsl(20, 90%, 78%);  border: 1px solid hsla(20, 90%, 78%, 0.5); }
+.id-copyright { background: hsla(50, 95%, 75%, 0.22);  color: hsl(50, 95%, 78%);  border: 1px solid hsla(50, 95%, 75%, 0.5); }
+.id-project   { background: hsla(140, 50%, 78%, 0.22); color: hsl(140, 55%, 78%); border: 1px solid hsla(140, 50%, 78%, 0.5); }
 
-/* BibTeX button */
-.research-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  align-items: center;
-}
+/* BibTeX button (two-click: reveal → copy) */
 .research-bib-btn {
   display: inline-flex;
   align-items: center;
@@ -2137,7 +2119,24 @@ textarea.form-input::-webkit-resizer { display: none; }
   border-color: var(--orange-yellow-crayola);
 }
 .research-bib-btn ion-icon { font-size: 14px; }
-.research-bib-btn.copied { color: hsl(120, 50%, 65%); border-color: hsl(120, 50%, 55%); }
+.research-bib-btn.copied { color: hsl(140, 55%, 70%); border-color: hsl(140, 50%, 60%); }
+
+/* BibTeX preview block (revealed on click) */
+.research-bib-preview {
+  display: none;
+  margin-top: 12px;
+  background: var(--eerie-black-1);
+  border: 1px solid var(--jet);
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-family: 'Courier New', monospace;
+  font-size: var(--fs-8);
+  color: var(--light-gray);
+  white-space: pre;
+  overflow-x: auto;
+  line-height: 1.5;
+}
+.research-bib-preview.is-open { display: block; }
 
 /* avatar — keep transparent, no square box */
 .avatar-box,
