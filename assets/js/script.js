@@ -217,7 +217,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 })();
 
-// ===== BIBTEX (click to reveal, click again to copy) =====
+// ===== BIBTEX (click to reveal → 5s auto-hide; click again to copy → resets) =====
 (function () {
   document.querySelectorAll(".research-bib-btn").forEach(btn => {
     const entry = btn.closest(".research-entry");
@@ -227,33 +227,49 @@ document.addEventListener("DOMContentLoaded", () => {
     const preview = entry.querySelector(".research-bib-preview");
     if (!preview) return;
 
-    // populate preview text once (decodes &#10; into real newlines)
     preview.textContent = bib;
 
-    let revealed = false;
+    const initialHTML = '<ion-icon name="document-text-outline"></ion-icon> BibTeX';
+    const copyHTML    = '<ion-icon name="copy-outline"></ion-icon> Copy';
+    const copiedHTML  = '<ion-icon name="checkmark-outline"></ion-icon> Copied';
+
+    btn.innerHTML = initialHTML;
+    let state = "initial";   // initial | revealed | copied
+    let hideTimer = null;
+
+    function reset() {
+      clearTimeout(hideTimer);
+      preview.classList.remove("is-open");
+      btn.classList.remove("copied");
+      btn.innerHTML = initialHTML;
+      state = "initial";
+    }
 
     btn.addEventListener("click", async (e) => {
       e.preventDefault();
 
-      // First click: reveal
-      if (!revealed) {
+      if (state === "initial") {
+        // First click: reveal + start 5s auto-hide timer
         preview.classList.add("is-open");
-        btn.innerHTML = '<ion-icon name="copy-outline"></ion-icon> Copy';
-        revealed = true;
+        btn.innerHTML = copyHTML;
+        state = "revealed";
+        hideTimer = setTimeout(reset, 5000);
         return;
       }
 
-      // Second click: copy
-      try {
-        await navigator.clipboard.writeText(bib);
+      if (state === "revealed") {
+        // Second click: copy
+        clearTimeout(hideTimer);
+        try {
+          await navigator.clipboard.writeText(bib);
+        } catch (err) {
+          prompt("Copy this BibTeX:", bib);
+        }
         btn.classList.add("copied");
-        btn.innerHTML = '<ion-icon name="checkmark-outline"></ion-icon> Copied';
-        setTimeout(() => {
-          btn.classList.remove("copied");
-          btn.innerHTML = '<ion-icon name="copy-outline"></ion-icon> Copy';
-        }, 1500);
-      } catch (err) {
-        prompt("Copy this BibTeX:", bib);
+        btn.innerHTML = copiedHTML;
+        state = "copied";
+        // after 1.5s reset to initial state (preview hidden, button initial)
+        setTimeout(reset, 1500);
       }
     });
   });
