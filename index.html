@@ -364,14 +364,16 @@
           </div>
 
           <!-- PUBLICATIONS (11) -->
-          <div class="research-group" data-research-group="publications">
-            <div class="research-group-head">
-              <h3 class="h3">Publications</h3>
-              <span class="research-count">11</span>
-            </div>
+          <ul class="pub-subfilter-list">
+    <li><button class="pub-subfilter-btn active" data-pub-subfilter="all">All</button></li>
+    <li><button class="pub-subfilter-btn" data-pub-subfilter="journal">Journal</button></li>
+    <li><button class="pub-subfilter-btn" data-pub-subfilter="conference">Conference</button></li>
+    <li><button class="pub-subfilter-btn" data-pub-subfilter="book">Book Chapter</button></li>
+  </ul>
 
-            <h4 class="research-subhead">Journal Articles</h4>
-            <ul class="research-list">
+            <div class="pub-sub" data-pub-type="journal">
+<h4 class="research-subhead">Journal Articles</h4>
+<ul class="research-list">
               <li class="research-entry" id="pub-j1">
                 <span class="research-badge badge-journal">Journal</span>
                 <h5 class="research-entry-title">Title of journal article one</h5>
@@ -395,8 +397,9 @@
               </li>
             </ul>
 
-            <h4 class="research-subhead">Conference Papers</h4>
-            <ul class="research-list">
+            <div class="pub-sub" data-pub-type="journal">
+<h4 class="research-subhead">Conference Papers</h4>
+<ul class="research-list">
               <li class="research-entry" id="pub-c1">
                 <span class="research-badge badge-conf">Conference</span>
                 <h5 class="research-entry-title">Title of conference paper one</h5>
@@ -448,8 +451,9 @@
               </li>
             </ul>
 
-            <h4 class="research-subhead">Book Chapter</h4>
-            <ul class="research-list">
+            <div class="pub-sub" data-pub-type="journal">
+<h4 class="research-subhead">Book Chapter</h4>
+<ul class="research-list">
               <li class="research-entry" id="pub-b1">
                 <span class="research-badge badge-book">Book Chapter</span>
                 <h5 class="research-entry-title">Title of the book chapter</h5>
