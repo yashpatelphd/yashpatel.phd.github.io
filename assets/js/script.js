@@ -199,3 +199,20 @@ document.addEventListener("DOMContentLoaded", () => {
     if (selectBtn) selectBtn.classList.remove("active");
   }));
 })();
+
+// ===== PUBLICATIONS SUB-FILTER =====
+(function () {
+  const subBtns = document.querySelectorAll(".pub-subfilter-btn");
+  const subs = document.querySelectorAll(".pub-sub");
+  if (!subBtns.length) return;
+
+  subBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const value = btn.dataset.pubSubfilter;
+      subs.forEach(s => {
+        s.classList.toggle("is-hidden", !(value === "all" || s.dataset.pubType === value));
+      });
+      subBtns.forEach(b => b.classList.toggle("active", b === btn));
+    });
+  });
+})();
