@@ -217,22 +217,40 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 })();
 
-// ===== BIBTEX COPY =====
+// ===== BIBTEX (click to reveal, click again to copy) =====
 (function () {
   document.querySelectorAll(".research-bib-btn").forEach(btn => {
+    const entry = btn.closest(".research-entry");
+    if (!entry) return;
+
+    const bib = entry.dataset.bibtex || "";
+    const preview = entry.querySelector(".research-bib-preview");
+    if (!preview) return;
+
+    // populate preview text once (decodes &#10; into real newlines)
+    preview.textContent = bib;
+
+    let revealed = false;
+
     btn.addEventListener("click", async (e) => {
       e.preventDefault();
-      const entry = btn.closest(".research-entry");
-      const bib = entry?.dataset.bibtex;
-      if (!bib) return;
+
+      // First click: reveal
+      if (!revealed) {
+        preview.classList.add("is-open");
+        btn.innerHTML = '<ion-icon name="copy-outline"></ion-icon> Copy';
+        revealed = true;
+        return;
+      }
+
+      // Second click: copy
       try {
         await navigator.clipboard.writeText(bib);
-        const original = btn.innerHTML;
         btn.classList.add("copied");
         btn.innerHTML = '<ion-icon name="checkmark-outline"></ion-icon> Copied';
         setTimeout(() => {
           btn.classList.remove("copied");
-          btn.innerHTML = original;
+          btn.innerHTML = '<ion-icon name="copy-outline"></ion-icon> Copy';
         }, 1500);
       } catch (err) {
         prompt("Copy this BibTeX:", bib);
