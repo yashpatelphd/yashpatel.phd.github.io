@@ -376,59 +376,12 @@
             <span class="filter-label">Filter publications by type</span>
             <ul class="pub-subfilter-list">
               <li><button class="pub-subfilter-btn active" data-pub-subfilter="all">All</button></li>
-              <li><button class="pub-subfilter-btn" data-pub-subfilter="journal">Journal</button></li>
               <li><button class="pub-subfilter-btn" data-pub-subfilter="conference">Conference</button></li>
+              <li><button class="pub-subfilter-btn" data-pub-subfilter="journal">Journal</button></li>
               <li><button class="pub-subfilter-btn" data-pub-subfilter="book">Book Chapter</button></li>
             </ul>
 
-            <!-- Journal Articles (newest first) -->
-            <div class="pub-sub" data-pub-type="journal">
-              <h4 class="research-subhead">Journal Articles</h4>
-              <ul class="research-list">
-
-                <li class="research-entry" id="pub-j3" data-bibtex="@article{patel2024j3,&#10;  author  = {Y. Patel},&#10;  title   = {Title of journal article three},&#10;  journal = {Journal Name},&#10;  year    = {2024}&#10;}">
-                  <span class="research-badge badge-journal">Journal</span>
-                  <span class="research-id id-journal">J-003</span>
-                  <h5 class="research-entry-title">Title of journal article three</h5>
-                  <p class="research-entry-meta"><strong>Y. Patel</strong> &middot; <em>Journal Name</em> &middot; 2024</p>
-                  <p class="research-entry-text">One-line summary.</p>
-                  <div class="research-actions">
-                    <a href="#" class="research-link" target="_blank">DOI / PDF <ion-icon name="open-outline"></ion-icon></a>
-                    <button class="research-bib-btn" type="button"><ion-icon name="document-text-outline"></ion-icon> BibTeX</button>
-                  </div>
-                  <pre class="research-bib-preview"></pre>
-                </li>
-
-                <li class="research-entry" id="pub-j2" data-bibtex="@article{patel2023j2,&#10;  author  = {Author A and Y. Patel},&#10;  title   = {Title of journal article two},&#10;  journal = {Journal Name},&#10;  year    = {2023}&#10;}">
-                  <span class="research-badge badge-journal">Journal</span>
-                  <span class="research-id id-journal">J-002</span>
-                  <h5 class="research-entry-title">Title of journal article two</h5>
-                  <p class="research-entry-meta">Author A, <strong>Y. Patel</strong> &middot; <em>Journal Name</em> &middot; 2023</p>
-                  <p class="research-entry-text">One-line summary.</p>
-                  <div class="research-actions">
-                    <a href="#" class="research-link" target="_blank">DOI / PDF <ion-icon name="open-outline"></ion-icon></a>
-                    <button class="research-bib-btn" type="button"><ion-icon name="document-text-outline"></ion-icon> BibTeX</button>
-                  </div>
-                  <pre class="research-bib-preview"></pre>
-                </li>
-
-                <li class="research-entry" id="pub-j1" data-bibtex="@article{patel2023j1,&#10;  author  = {Y. Patel and Author B},&#10;  title   = {Title of journal article one},&#10;  journal = {Journal Name},&#10;  year    = {2023}&#10;}">
-                  <span class="research-badge badge-journal">Journal</span>
-                  <span class="research-id id-journal">J-001</span>
-                  <h5 class="research-entry-title">Title of journal article one</h5>
-                  <p class="research-entry-meta"><strong>Y. Patel</strong>, Author B &middot; <em>Journal Name</em> &middot; 2023</p>
-                  <p class="research-entry-text">One-line summary.</p>
-                  <div class="research-actions">
-                    <a href="#" class="research-link" target="_blank">DOI / PDF <ion-icon name="open-outline"></ion-icon></a>
-                    <button class="research-bib-btn" type="button"><ion-icon name="document-text-outline"></ion-icon> BibTeX</button>
-                  </div>
-                  <pre class="research-bib-preview"></pre>
-                </li>
-
-              </ul>
-            </div>
-
-            <!-- Conference Papers (newest first) -->
+            <!-- Conference Papers -->
             <div class="pub-sub" data-pub-type="conference">
               <h4 class="research-subhead">Conference Papers</h4>
               <ul class="research-list">
@@ -527,6 +480,53 @@
               </ul>
             </div>
 
+            <!-- Journal Articles -->
+            <div class="pub-sub" data-pub-type="journal">
+              <h4 class="research-subhead">Journal Articles</h4>
+              <ul class="research-list">
+
+                <li class="research-entry" id="pub-j3" data-bibtex="@article{patel2024j3,&#10;  author  = {Y. Patel},&#10;  title   = {Title of journal article three},&#10;  journal = {Journal Name},&#10;  year    = {2024}&#10;}">
+                  <span class="research-badge badge-journal">Journal</span>
+                  <span class="research-id id-journal">J-003</span>
+                  <h5 class="research-entry-title">Title of journal article three</h5>
+                  <p class="research-entry-meta"><strong>Y. Patel</strong> &middot; <em>Journal Name</em> &middot; 2024</p>
+                  <p class="research-entry-text">One-line summary.</p>
+                  <div class="research-actions">
+                    <a href="#" class="research-link" target="_blank">DOI / PDF <ion-icon name="open-outline"></ion-icon></a>
+                    <button class="research-bib-btn" type="button"><ion-icon name="document-text-outline"></ion-icon> BibTeX</button>
+                  </div>
+                  <pre class="research-bib-preview"></pre>
+                </li>
+
+                <li class="research-entry" id="pub-j2" data-bibtex="@article{patel2023j2,&#10;  author  = {Author A and Y. Patel},&#10;  title   = {Title of journal article two},&#10;  journal = {Journal Name},&#10;  year    = {2023}&#10;}">
+                  <span class="research-badge badge-journal">Journal</span>
+                  <span class="research-id id-journal">J-002</span>
+                  <h5 class="research-entry-title">Title of journal article two</h5>
+                  <p class="research-entry-meta">Author A, <strong>Y. Patel</strong> &middot; <em>Journal Name</em> &middot; 2023</p>
+                  <p class="research-entry-text">One-line summary.</p>
+                  <div class="research-actions">
+                    <a href="#" class="research-link" target="_blank">DOI / PDF <ion-icon name="open-outline"></ion-icon></a>
+                    <button class="research-bib-btn" type="button"><ion-icon name="document-text-outline"></ion-icon> BibTeX</button>
+                  </div>
+                  <pre class="research-bib-preview"></pre>
+                </li>
+
+                <li class="research-entry" id="pub-j1" data-bibtex="@article{patel2023j1,&#10;  author  = {Y. Patel and Author B},&#10;  title   = {Title of journal article one},&#10;  journal = {Journal Name},&#10;  year    = {2023}&#10;}">
+                  <span class="research-badge badge-journal">Journal</span>
+                  <span class="research-id id-journal">J-001</span>
+                  <h5 class="research-entry-title">Title of journal article one</h5>
+                  <p class="research-entry-meta"><strong>Y. Patel</strong>, Author B &middot; <em>Journal Name</em> &middot; 2023</p>
+                  <p class="research-entry-text">One-line summary.</p>
+                  <div class="research-actions">
+                    <a href="#" class="research-link" target="_blank">DOI / PDF <ion-icon name="open-outline"></ion-icon></a>
+                    <button class="research-bib-btn" type="button"><ion-icon name="document-text-outline"></ion-icon> BibTeX</button>
+                  </div>
+                  <pre class="research-bib-preview"></pre>
+                </li>
+
+              </ul>
+            </div>
+
             <!-- Book Chapter -->
             <div class="pub-sub" data-pub-type="book">
               <h4 class="research-subhead">Book Chapter</h4>
@@ -551,6 +551,7 @@
           </div>
 
 
+         
           <!-- ============ PATENTS (3) ============ -->
           <div class="research-group" data-research-group="patents">
 
