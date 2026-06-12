@@ -2256,3 +2256,21 @@ textarea.form-input::-webkit-resizer { display: none; }
   border-radius: 50% !important;
   box-shadow: none !important;
 }
+
+/* Research focus cards — keep icon-left layout on mobile too */
+@media (max-width: 579px) {
+  .service-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 18px;
+  }
+  .service-icon-box {
+    margin-bottom: 0;
+    margin-top: 3px;
+    flex-shrink: 0;
+  }
+  .service-content-box { text-align: left; }
+  .service-item-title { margin-bottom: 5px; }
+}
