@@ -2426,3 +2426,47 @@ textarea.form-input::-webkit-resizer { display: none; }
   font-weight: var(--fw-300);
   line-height: 1.55;
 }
+
+/*-----------------------------------*\
+  #CAREER — logo-led timeline rows
+\*-----------------------------------*/
+.career-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  text-decoration: none;
+  color: inherit;
+}
+.career-logo {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  background: var(--white-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  box-shadow: var(--shadow-1);
+  overflow: hidden;
+  transition: var(--transition-1);
+}
+.career-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.career-body { flex: 1; min-width: 0; }
+a.career-item:hover .career-logo {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-2);
+}
+a.career-item:hover .h4 { color: var(--orange-yellow-crayola); }
+
+/* shift the timeline dot/line to align with the logo, not the heading */
+.career-item .h4 { margin-top: 2px; }
+
+/* on tiny screens keep things tight */
+@media (max-width: 579px) {
+  .career-logo { width: 44px; height: 44px; }
+}
