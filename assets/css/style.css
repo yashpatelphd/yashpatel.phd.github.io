@@ -2426,3 +2426,21 @@ textarea.form-input::-webkit-resizer { display: none; }
   font-weight: var(--fw-300);
   line-height: 1.55;
 }
+
+/*-----------------------------------*\
+  #CAREER — clearer entry hierarchy
+\*-----------------------------------*/
+.timeline-org {
+  display: block;
+  color: var(--white-2);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+  margin: 6px 0 4px;
+}
+.timeline-org .timeline-location {
+  color: var(--light-gray);
+  font-weight: var(--fw-400);
+}
+.timeline-item .timeline-text {
+  margin-top: 4px;
+}
