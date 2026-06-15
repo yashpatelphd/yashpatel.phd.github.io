@@ -2527,3 +2527,24 @@ textarea.form-input::-webkit-resizer { display: none; }
   line-height: 1.6;
 }
 .timeline-supervisor { margin-top: 4px; }
+
+/* repeat-marker — smaller gold accent for consecutive same-org entries */
+[data-page="career"] .timeline-item.is-repeat::after {
+  content: "";
+  display: block !important;
+  height: 10px;
+  width: 10px;
+  left: -47px;
+  top: -2px;
+  background: var(--orange-yellow-crayola);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px var(--smoky-black), 0 0 0 4px var(--orange-yellow-crayola);
+}
+@media (min-width: 580px) {
+  [data-page="career"] .timeline-item.is-repeat::after {
+    left: -59px;
+    height: 12px;
+    width: 12px;
+    top: -3px;
+  }
+}
