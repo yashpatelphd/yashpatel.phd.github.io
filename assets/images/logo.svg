@@ -1,0 +1,11 @@
+<svg width="185" height="185" viewBox="0 0 185 185" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="185" height="185" rx="46" fill="#1A1A1C"/>
+  <rect x="3" y="3" width="179" height="179" rx="43" fill="none" stroke="url(#g2)" stroke-width="3"/>
+  <text x="92.5" y="124" font-family="Poppins, 'Segoe UI', sans-serif" font-size="92" font-weight="600" text-anchor="middle" fill="url(#g2)" letter-spacing="-3">YP</text>
+  <defs>
+    <linearGradient id="g2" x1="0" y1="0" x2="185" y2="185" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFDB6E"/>
+      <stop offset="1" stop-color="#FFBC5E"/>
+    </linearGradient>
+  </defs>
+</svg>
