@@ -2431,30 +2431,30 @@ textarea.form-input::-webkit-resizer { display: none; }
   #CAREER — logo timeline markers
 \*-----------------------------------*/
 
-/* widen the left margin to make room for logo markers */
+/* widen left margin to make room for logo markers */
 [data-page="career"] .timeline-list {
   margin-left: 65px;
 }
 
-/* gold gradient line connecting the markers */
+/* gold line — centered behind the logos */
 [data-page="career"] .timeline-item:not(:last-child)::before {
   background: var(--text-gradient-yellow);
   width: 2px;
   opacity: 0.5;
-  left: -42px;
+  left: -43px;
 }
 
-/* hide the default yellow dot when an entry has a logo */
+/* hide default yellow dot when an entry has a logo */
 [data-page="career"] .timeline-item.has-logo::after {
   display: none;
 }
 
-/* reposition the fallback dot for logo-less entries */
+/* fallback dot — centered on the gold line */
 [data-page="career"] .timeline-item::after {
-  left: -46px;
+  left: -47px;
 }
 
-/* logo as timeline marker */
+/* logo marker — gold ring + white tile, centered on the gold line */
 [data-page="career"] .timeline-logo {
   position: absolute;
   left: -60px;
@@ -2467,7 +2467,9 @@ textarea.form-input::-webkit-resizer { display: none; }
   align-items: center;
   justify-content: center;
   padding: 4px;
-  box-shadow: var(--shadow-1);
+  box-shadow:
+    0 0 0 2px var(--orange-yellow-crayola),
+    var(--shadow-1);
   z-index: 2;
   overflow: hidden;
   transition: var(--transition-1);
@@ -2479,14 +2481,16 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 [data-page="career"] .timeline-logo:hover {
   transform: scale(1.1);
-  box-shadow: var(--shadow-2);
+  box-shadow:
+    0 0 0 2px var(--orange-yellow-crayola),
+    var(--shadow-2);
 }
 
-/* desktop sizing */
+/* desktop sizing — bigger logo, line stays centered */
 @media (min-width: 580px) {
   [data-page="career"] .timeline-list { margin-left: 82px; }
-  [data-page="career"] .timeline-item:not(:last-child)::before { left: -54px; }
-  [data-page="career"] .timeline-item::after { left: -58px; }
+  [data-page="career"] .timeline-item:not(:last-child)::before { left: -55px; }
+  [data-page="career"] .timeline-item::after { left: -59px; }
   [data-page="career"] .timeline-logo {
     left: -76px;
     width: 44px;
@@ -2495,7 +2499,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 }
 
-/* org name + location on SEPARATE lines so long names don't wrap awkwardly */
+/* org name + location on SEPARATE lines */
 .timeline-org {
   display: block;
   color: var(--white-2);
@@ -2506,9 +2510,20 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 .timeline-location {
   display: block;
-  color: var(--light-gray-70);
-  font-weight: var(--fw-300);
+  color: var(--light-gray);  /* brighter than before */
+  font-weight: var(--fw-400);
   font-size: var(--fs-7);
   margin: 2px 0 6px;
   line-height: 1.4;
 }
+
+/* dissertation and supervisor on separate lines */
+.timeline-dissertation,
+.timeline-supervisor {
+  display: block;
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+}
+.timeline-supervisor { margin-top: 4px; }
