@@ -2436,12 +2436,12 @@ textarea.form-input::-webkit-resizer { display: none; }
   margin-left: 70px;
 }
 
-/* gold connecting line — runs through center of logos */
+/* gold connecting line — runs through center of icon-box AND logos */
 [data-page="career"] .timeline-item:not(:last-child)::before {
   background: var(--text-gradient-yellow);
   width: 2px;
   opacity: 0.5;
-  left: -49px;
+  left: -56px;
 }
 
 /* hide default yellow dot for entries with a logo */
@@ -2449,15 +2449,15 @@ textarea.form-input::-webkit-resizer { display: none; }
   display: none;
 }
 
-/* default fallback dot — also centered on line */
+/* default fallback dot — centered on line */
 [data-page="career"] .timeline-item::after {
-  left: -52px;
+  left: -58px;
 }
 
 /* logo marker — gold ring + white tile, centered on line */
 [data-page="career"] .timeline-logo {
   position: absolute;
-  left: -66px;
+  left: -73px;
   top: -3px;
   width: 36px;
   height: 36px;
@@ -2486,14 +2486,14 @@ textarea.form-input::-webkit-resizer { display: none; }
     var(--shadow-2);
 }
 
-/* repeat marker — gold-ringed dot for consecutive same-org entries */
+/* repeat marker — small gold dot for consecutive same-org entries */
 [data-page="career"] .timeline-item.is-repeat::after {
   content: "";
   display: block;
   position: absolute;
   height: 6px;
   width: 6px;
-  left: -51px;
+  left: -58px;
   top: 6px;
   background: var(--orange-yellow-crayola);
   border-radius: 50%;
@@ -2501,19 +2501,19 @@ textarea.form-input::-webkit-resizer { display: none; }
   z-index: 2;
 }
 
-/* desktop sizing — logo gets bigger, all positions shift to stay centered */
+/* desktop sizing — bigger icon-box (48px), so logos and line shift to match */
 @media (min-width: 580px) {
   [data-page="career"] .timeline-list { margin-left: 88px; }
-  [data-page="career"] .timeline-item:not(:last-child)::before { left: -62px; }
-  [data-page="career"] .timeline-item::after { left: -66px; }
+  [data-page="career"] .timeline-item:not(:last-child)::before { left: -65px; }
+  [data-page="career"] .timeline-item::after { left: -68px; }
   [data-page="career"] .timeline-logo {
-    left: -84px;
+    left: -86px;
     width: 44px;
     height: 44px;
     top: -5px;
   }
   [data-page="career"] .timeline-item.is-repeat::after {
-    left: -65px;
+    left: -68px;
     height: 8px;
     width: 8px;
     top: 7px;
