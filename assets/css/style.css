@@ -2428,19 +2428,87 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 /*-----------------------------------*\
-  #CAREER — clearer entry hierarchy
+  #CAREER — logo timeline markers
 \*-----------------------------------*/
+
+/* widen the left margin to make room for logo markers */
+[data-page="career"] .timeline-list {
+  margin-left: 65px;
+}
+
+/* gold gradient line connecting the markers */
+[data-page="career"] .timeline-item:not(:last-child)::before {
+  background: var(--text-gradient-yellow);
+  width: 2px;
+  opacity: 0.5;
+  left: -42px;
+}
+
+/* hide the default yellow dot when an entry has a logo */
+[data-page="career"] .timeline-item.has-logo::after {
+  display: none;
+}
+
+/* reposition the fallback dot for logo-less entries */
+[data-page="career"] .timeline-item::after {
+  left: -46px;
+}
+
+/* logo as timeline marker */
+[data-page="career"] .timeline-logo {
+  position: absolute;
+  left: -60px;
+  top: -3px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--white-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  box-shadow: var(--shadow-1);
+  z-index: 2;
+  overflow: hidden;
+  transition: var(--transition-1);
+}
+[data-page="career"] .timeline-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+[data-page="career"] .timeline-logo:hover {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-2);
+}
+
+/* desktop sizing */
+@media (min-width: 580px) {
+  [data-page="career"] .timeline-list { margin-left: 82px; }
+  [data-page="career"] .timeline-item:not(:last-child)::before { left: -54px; }
+  [data-page="career"] .timeline-item::after { left: -58px; }
+  [data-page="career"] .timeline-logo {
+    left: -76px;
+    width: 44px;
+    height: 44px;
+    top: -5px;
+  }
+}
+
+/* org name + location on SEPARATE lines so long names don't wrap awkwardly */
 .timeline-org {
   display: block;
   color: var(--white-2);
   font-size: var(--fs-6);
   font-weight: var(--fw-500);
-  margin: 6px 0 4px;
+  margin: 8px 0 0;
+  line-height: 1.4;
 }
-.timeline-org .timeline-location {
-  color: var(--light-gray);
-  font-weight: var(--fw-400);
-}
-.timeline-item .timeline-text {
-  margin-top: 4px;
+.timeline-location {
+  display: block;
+  color: var(--light-gray-70);
+  font-weight: var(--fw-300);
+  font-size: var(--fs-7);
+  margin: 2px 0 6px;
+  line-height: 1.4;
 }
