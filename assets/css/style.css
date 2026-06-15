@@ -2491,13 +2491,13 @@ textarea.form-input::-webkit-resizer { display: none; }
   content: "";
   display: block;
   position: absolute;
-  height: 10px;
-  width: 10px;
-  left: -53px;
-  top: 4px;
+  height: 6px;
+  width: 6px;
+  left: -51px;
+  top: 6px;
   background: var(--orange-yellow-crayola);
   border-radius: 50%;
-  box-shadow: 0 0 0 3px var(--smoky-black), 0 0 0 5px var(--orange-yellow-crayola);
+  box-shadow: 0 0 0 2px var(--smoky-black), 0 0 0 3px var(--orange-yellow-crayola);
   z-index: 2;
 }
 
@@ -2513,10 +2513,10 @@ textarea.form-input::-webkit-resizer { display: none; }
     top: -5px;
   }
   [data-page="career"] .timeline-item.is-repeat::after {
-    left: -67px;
-    height: 12px;
-    width: 12px;
-    top: 5px;
+    left: -65px;
+    height: 8px;
+    width: 8px;
+    top: 7px;
   }
 }
 
