@@ -2472,3 +2472,8 @@ textarea.form-input::-webkit-resizer { display: none; }
 @media (max-width: 579px) {
   .career-logo { width: 44px; height: 44px; }
 }
+
+/* Career: align timeline dot vertically with logo center */
+[data-page="career"] .timeline-item::before {
+  top: 25px;
+}
