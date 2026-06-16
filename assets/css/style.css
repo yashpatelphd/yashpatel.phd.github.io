@@ -2548,3 +2548,54 @@ textarea.form-input::-webkit-resizer { display: none; }
   line-height: 1.6;
 }
 .timeline-supervisor { margin-top: 4px; }
+
+/*-----------------------------------*\
+  #RESEARCH — entry meta hierarchy
+\*-----------------------------------*/
+
+.research-entry-authors {
+  color: var(--light-gray);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-400);
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+.research-entry-authors strong {
+  color: var(--orange-yellow-crayola);
+  font-weight: var(--fw-500);
+}
+
+.research-entry-venue {
+  color: var(--white-2);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-400);
+  font-style: italic;
+  line-height: 1.45;
+  margin-bottom: 10px;
+}
+
+.research-entry-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+.research-entry-details span {
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--fs-8);
+  font-weight: var(--fw-500);
+  padding: 3px 9px;
+  border-radius: 6px;
+  background: var(--eerie-black-1);
+  border: 1px solid var(--jet);
+  letter-spacing: 0.3px;
+}
+.research-entry-details .entry-pub { color: var(--white-2); }
+.research-entry-details .entry-loc { color: var(--light-gray-70); }
+.research-entry-details .entry-year {
+  color: var(--smoky-black);
+  background: var(--vegas-gold);
+  border-color: var(--vegas-gold);
+  font-weight: var(--fw-600);
+}
