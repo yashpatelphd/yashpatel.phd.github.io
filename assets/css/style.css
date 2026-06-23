@@ -2333,13 +2333,14 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 /* multi-line year pill (for date ranges) */
 .rec-item-year-range {
-  height: auto;
+  height: auto !important;
   min-height: 24px;
-  padding: 4px 10px;
-  line-height: 1.2;
-  text-align: center;
+  padding: 5px 10px;
+  line-height: 1.25;
   flex-direction: column;
+  justify-content: center;
 }
+.rec-item-year-range br { display: block; }
 
 .rec-item-body { flex: 1; min-width: 0; }
 
