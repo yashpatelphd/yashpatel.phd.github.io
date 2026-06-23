@@ -2841,7 +2841,6 @@ a.cm-aff-card:hover .cm-aff-name { color: var(--orange-yellow-crayola); }
   letter-spacing: 0.4px;
   line-height: 1.3;
   white-space: nowrap;
-  text-transform: uppercase;
 }
 .cm-tag:hover .cm-tag-flag {
   border-color: var(--vegas-gold);
