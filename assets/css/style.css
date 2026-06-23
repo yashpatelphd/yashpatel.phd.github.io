@@ -2653,7 +2653,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 .cm-aff-card:hover { transform: translateY(-2px); }
 
 .cm-aff-logo {
-  flex-shrink: 0;
+  flex: 0 0 56px;
   width: 56px;
   height: 56px;
   display: flex;
@@ -2663,11 +2663,15 @@ textarea.form-input::-webkit-resizer { display: none; }
   border-radius: 10px;
   padding: 6px;
   overflow: hidden;
+  box-sizing: border-box;
 }
 .cm-aff-logo img {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  max-width: 44px;
+  max-height: 44px;
   object-fit: contain;
+  display: block;
 }
 
 /* link card behavior */
