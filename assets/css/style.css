@@ -2617,41 +2617,207 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 
 /*-----------------------------------*\
-  #COMMUNITY — compact single-line rows
+  #COMMUNITY — distinct visual language
 \*-----------------------------------*/
 
-.com-row-compact {
-  display: flex !important;
-  flex-direction: row !important;
-  justify-content: space-between;
+/* === Affiliations as prominent badges at the top === */
+.cm-affiliations {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-bottom: 36px;
+}
+@media (min-width: 580px) {
+  .cm-affiliations { grid-template-columns: 1fr 1fr; }
+}
+.cm-aff-card {
+  position: relative;
+  display: flex;
   align-items: center;
   gap: 16px;
-  padding: 12px 16px;
+  background: var(--border-gradient-onyx);
+  padding: 18px 20px;
+  border-radius: 14px;
+  box-shadow: var(--shadow-2);
+  z-index: 1;
+  transition: var(--transition-1);
 }
-.com-row-compact .com-row-title {
-  flex: 1;
-  min-width: 0;
-  font-size: var(--fs-6);
-  font-weight: var(--fw-500);
-  color: var(--white-2);
-  line-height: 1.4;
+.cm-aff-card::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  border-radius: inherit;
+  z-index: -1;
 }
-.com-row-compact .com-row-period {
+.cm-aff-card:hover { transform: translateY(-2px); }
+
+.cm-aff-mark {
   flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--text-gradient-yellow);
+  color: var(--smoky-black);
+  font-size: 14px;
+  font-weight: var(--fw-600);
+  letter-spacing: 0.5px;
+  border-radius: 12px;
+}
+.cm-aff-info { flex: 1; min-width: 0; }
+.cm-aff-name {
+  color: var(--white-2);
+  font-size: var(--fs-5);
+  font-weight: var(--fw-500);
+  margin-bottom: 4px;
+  line-height: 1.3;
+}
+.cm-aff-since {
   color: var(--vegas-gold);
   font-size: var(--fs-7);
-  font-weight: var(--fw-500);
-  white-space: nowrap;
+  font-weight: var(--fw-400);
 }
 
-/* mobile: stack on small screens so long titles don't get crushed */
+/* === Group sections (Editorial, Committees) === */
+.cm-group { margin-bottom: 32px; }
+
+.cm-group-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--jet);
+}
+.cm-group-head ion-icon {
+  font-size: 20px;
+  color: var(--orange-yellow-crayola);
+  --ionicon-stroke-width: 35px;
+}
+.cm-group-title {
+  color: var(--white-2);
+  font-size: var(--fs-3);
+  font-weight: var(--fw-500);
+  text-transform: capitalize;
+  margin: 0;
+}
+
+/* === Compact horizontal list rows === */
+.cm-list {
+  display: grid;
+  gap: 4px;
+}
+.cm-list-item {
+  display: grid;
+  grid-template-columns: 110px 1fr auto;
+  align-items: baseline;
+  gap: 14px;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--jet);
+}
+.cm-list-item:last-child { border-bottom: none; }
+
+.cm-role {
+  color: var(--orange-yellow-crayola);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-600);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+.cm-venue {
+  color: var(--white-2);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-400);
+  line-height: 1.4;
+}
+.cm-venue em {
+  color: var(--light-gray-70);
+  font-style: normal;
+  font-weight: var(--fw-300);
+}
+.cm-when {
+  color: var(--vegas-gold);
+  font-size: var(--fs-8);
+  font-weight: var(--fw-500);
+  white-space: nowrap;
+  letter-spacing: 0.4px;
+}
+
+/* === Volunteering as tag chips === */
+.cm-tags {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+@media (min-width: 580px) {
+  .cm-tags { grid-template-columns: 1fr 1fr; }
+}
+
+.cm-tag {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 14px;
+  background: var(--eerie-black-1);
+  border: 1px solid var(--jet);
+  border-radius: 10px;
+  transition: var(--transition-1);
+  overflow: hidden;
+}
+.cm-tag::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--vegas-gold);
+  opacity: 0.6;
+  transition: var(--transition-1);
+}
+.cm-tag:hover {
+  border-color: var(--vegas-gold);
+  background: var(--eerie-black-2);
+}
+.cm-tag:hover::before {
+  opacity: 1;
+  background: var(--text-gradient-yellow);
+}
+
+.cm-tag-wide { grid-column: 1 / -1; }
+
+.cm-tag-label {
+  color: var(--orange-yellow-crayola);
+  font-size: var(--fs-8);
+  font-weight: var(--fw-600);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+.cm-tag-name {
+  color: var(--white-2);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+  line-height: 1.35;
+}
+.cm-tag-year {
+  color: var(--light-gray-70);
+  font-size: var(--fs-8);
+  font-weight: var(--fw-400);
+  margin-top: 2px;
+}
+
+/* mobile: condense the list columns so things fit */
 @media (max-width: 579px) {
-  .com-row-compact {
-    flex-direction: column !important;
-    align-items: flex-start;
+  .cm-list-item {
+    grid-template-columns: 1fr;
     gap: 4px;
+    padding: 12px 0;
   }
-  .com-row-compact .com-row-period {
-    font-size: var(--fs-8);
+  .cm-when {
+    justify-self: start;
+    margin-top: 2px;
   }
 }
