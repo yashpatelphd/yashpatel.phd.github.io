@@ -2823,7 +2823,7 @@ a.cm-aff-card:hover .cm-aff-name { color: var(--orange-yellow-crayola); }
 }
 
 /* country badge in top-right corner of each tag */
-.cm-tag { padding-top: 14px; padding-right: 70px; }
+.cm-tag { padding-top: 14px; padding-right: 56px; }
 
 .cm-tag-flag {
   position: absolute;
