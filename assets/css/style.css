@@ -2877,14 +2877,14 @@ a.cm-aff-card:hover .cm-aff-name { color: var(--orange-yellow-crayola); }
 }
 
 /*-----------------------------------*\
-  #RECOGNITION — Awards / Grants / Talks (new)
+  #RECOGNITION — Awards / Grants / Talks (compact)
 \*-----------------------------------*/
 
-/* ===== AWARDS & HONORS — card grid ===== */
+/* ===== AWARDS & HONORS — compact card grid ===== */
 .awards-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 14px;
+  gap: 10px;
 }
 @media (min-width: 580px) {
   .awards-grid { grid-template-columns: 1fr 1fr; }
@@ -2894,8 +2894,8 @@ a.cm-aff-card:hover .cm-aff-name { color: var(--orange-yellow-crayola); }
   position: relative;
   background: var(--eerie-black-1);
   border: 1px solid var(--jet);
-  border-radius: 12px;
-  padding: 20px 18px 18px;
+  border-radius: 10px;
+  padding: 14px 14px 12px;
   overflow: hidden;
   transition: var(--transition-1);
 }
@@ -2904,7 +2904,7 @@ a.cm-aff-card:hover .cm-aff-name { color: var(--orange-yellow-crayola); }
   transform: translateY(-2px);
 }
 
-/* gold triangular corner accent (top-right) */
+/* gold triangular corner accent (smaller) */
 .award-corner {
   position: absolute;
   top: 0;
@@ -2912,7 +2912,7 @@ a.cm-aff-card:hover .cm-aff-name { color: var(--orange-yellow-crayola); }
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 0 70px 70px 0;
+  border-width: 0 44px 44px 0;
   border-color: transparent var(--vegas-gold) transparent transparent;
   opacity: 0.55;
   transition: var(--transition-1);
@@ -2921,17 +2921,17 @@ a.cm-aff-card:hover .cm-aff-name { color: var(--orange-yellow-crayola); }
 
 .award-icon {
   position: relative;
-  width: 38px;
-  height: 38px;
-  border-radius: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
   background: var(--eerie-black-2);
   border: 1px solid var(--jet);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--orange-yellow-crayola);
-  font-size: 20px;
-  margin-bottom: 14px;
+  font-size: 16px;
+  margin-bottom: 10px;
   z-index: 1;
 }
 .award-icon ion-icon { --ionicon-stroke-width: 35px; }
@@ -2939,45 +2939,45 @@ a.cm-aff-card:hover .cm-aff-name { color: var(--orange-yellow-crayola); }
 .award-date {
   display: block;
   color: var(--vegas-gold);
-  font-size: var(--fs-8);
+  font-size: 10px;
   font-weight: var(--fw-600);
   text-transform: uppercase;
-  letter-spacing: 0.8px;
-  margin-bottom: 6px;
+  letter-spacing: 0.7px;
+  margin-bottom: 4px;
 }
 
 .award-title {
   color: var(--white-2);
-  font-size: var(--fs-5);
+  font-size: var(--fs-6);
   font-weight: var(--fw-500);
-  line-height: 1.35;
-  margin-bottom: 6px;
+  line-height: 1.3;
+  margin-bottom: 4px;
 }
 
 .award-text {
   color: var(--light-gray);
-  font-size: var(--fs-6);
+  font-size: var(--fs-7);
   font-weight: var(--fw-300);
-  line-height: 1.55;
+  line-height: 1.5;
 }
 
 
-/* ===== RESEARCH GRANTS — amount-prominent rows ===== */
+/* ===== RESEARCH GRANTS — smaller amount ===== */
 .grants-list {
   display: grid;
-  gap: 12px;
+  gap: 10px;
 }
 
 .grant-card {
   display: grid;
   grid-template-columns: auto 1px 1fr auto;
   align-items: center;
-  gap: 18px;
+  gap: 16px;
   background: var(--eerie-black-1);
   border: 1px solid var(--jet);
   border-left: 3px solid var(--vegas-gold);
-  border-radius: 12px;
-  padding: 16px 20px;
+  border-radius: 10px;
+  padding: 12px 18px;
   transition: var(--transition-1);
 }
 .grant-card:hover {
@@ -2990,39 +2990,39 @@ a.cm-aff-card:hover .cm-aff-name { color: var(--orange-yellow-crayola); }
   align-items: baseline;
   gap: 2px;
   color: var(--orange-yellow-crayola);
-  min-width: 150px;
+  min-width: 110px;
 }
 .grant-currency {
   display: inline;
-  font-size: 22px;
+  font-size: 15px;
   font-weight: var(--fw-500);
   line-height: 1;
 }
 .grant-value {
   display: inline;
-  font-size: 28px;
+  font-size: 18px;
   font-weight: var(--fw-600);
-  letter-spacing: -0.5px;
+  letter-spacing: -0.3px;
   line-height: 1;
 }
 
 .grant-divider {
   width: 1px;
-  height: 36px;
+  height: 30px;
   background: var(--jet);
 }
 
 .grant-info { min-width: 0; }
 .grant-title {
   color: var(--white-2);
-  font-size: var(--fs-5);
+  font-size: var(--fs-6);
   font-weight: var(--fw-500);
-  line-height: 1.35;
-  margin-bottom: 3px;
+  line-height: 1.3;
+  margin-bottom: 2px;
 }
 .grant-org {
   color: var(--light-gray-70);
-  font-size: var(--fs-6);
+  font-size: var(--fs-7);
   font-weight: var(--fw-300);
   line-height: 1.4;
 }
@@ -3041,19 +3041,19 @@ a.cm-aff-card:hover .cm-aff-name { color: var(--orange-yellow-crayola); }
     grid-template-areas:
       "amount date"
       "info   info";
-    gap: 10px 12px;
-    padding: 14px 16px;
+    gap: 8px 12px;
+    padding: 12px 14px;
   }
   .grant-amount  { grid-area: amount; min-width: 0; }
   .grant-divider { display: none; }
   .grant-info    { grid-area: info; }
   .grant-date    { grid-area: date; align-self: start; }
-  .grant-currency { font-size: 18px; }
-  .grant-value    { font-size: 22px; }
+  .grant-currency { font-size: 14px; }
+  .grant-value    { font-size: 16px; }
 }
 
 
-/* ===== INVITED TALKS — Option A cards ===== */
+/* ===== INVITED TALKS — varied icons, single-line meta ===== */
 .talks-list {
   display: grid;
   gap: 10px;
@@ -3062,12 +3062,12 @@ a.cm-aff-card:hover .cm-aff-name { color: var(--orange-yellow-crayola); }
 .talk-card {
   display: grid;
   grid-template-columns: auto 1fr auto;
-  align-items: center;
-  gap: 16px;
+  align-items: flex-start;
+  gap: 14px;
   background: var(--eerie-black-1);
   border: 1px solid var(--jet);
-  border-radius: 12px;
-  padding: 14px 18px;
+  border-radius: 10px;
+  padding: 13px 16px;
   transition: var(--transition-1);
 }
 .talk-card:hover {
@@ -3076,17 +3076,18 @@ a.cm-aff-card:hover .cm-aff-name { color: var(--orange-yellow-crayola); }
 }
 
 .talk-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
+  width: 38px;
+  height: 38px;
+  border-radius: 9px;
   background: var(--eerie-black-2);
   border: 1px solid var(--jet);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--light-gray);
-  font-size: 22px;
+  color: var(--orange-yellow-crayola);
+  font-size: 18px;
   flex-shrink: 0;
+  margin-top: 2px;
 }
 .talk-icon ion-icon { --ionicon-stroke-width: 35px; }
 
@@ -3094,7 +3095,7 @@ a.cm-aff-card:hover .cm-aff-name { color: var(--orange-yellow-crayola); }
 
 .talk-title {
   color: var(--white-2);
-  font-size: var(--fs-5);
+  font-size: var(--fs-6);
   font-weight: var(--fw-600);
   line-height: 1.3;
   margin-bottom: 4px;
@@ -3104,7 +3105,7 @@ a.cm-aff-card:hover .cm-aff-name { color: var(--orange-yellow-crayola); }
   color: var(--light-gray-70);
   font-size: var(--fs-7);
   font-weight: var(--fw-400);
-  line-height: 1.45;
+  line-height: 1.4;
   margin-bottom: 4px;
 }
 .talk-audience {
@@ -3126,7 +3127,6 @@ a.cm-aff-card:hover .cm-aff-name { color: var(--orange-yellow-crayola); }
   font-weight: var(--fw-600);
   font-style: italic;
   white-space: nowrap;
-  align-self: flex-start;
   margin-top: 2px;
 }
 
@@ -3136,10 +3136,10 @@ a.cm-aff-card:hover .cm-aff-name { color: var(--orange-yellow-crayola); }
     grid-template-areas:
       "icon date"
       "body body";
-    gap: 10px 12px;
-    padding: 14px 16px;
+    gap: 8px 12px;
+    padding: 12px 14px;
   }
-  .talk-icon { grid-area: icon; width: 38px; height: 38px; font-size: 18px; }
+  .talk-icon { grid-area: icon; width: 32px; height: 32px; font-size: 16px; }
   .talk-body { grid-area: body; }
   .talk-date { grid-area: date; justify-self: end; }
 }
