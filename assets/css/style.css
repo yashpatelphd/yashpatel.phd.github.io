@@ -2652,20 +2652,28 @@ textarea.form-input::-webkit-resizer { display: none; }
 }
 .cm-aff-card:hover { transform: translateY(-2px); }
 
-.cm-aff-mark {
+.cm-aff-logo {
   flex-shrink: 0;
-  width: 46px;
-  height: 46px;
+  width: 56px;
+  height: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--text-gradient-yellow);
-  color: var(--smoky-black);
-  font-size: 12px;
-  font-weight: var(--fw-600);
-  letter-spacing: 0.4px;
+  background: var(--white-2);
   border-radius: 10px;
+  padding: 6px;
+  overflow: hidden;
 }
+.cm-aff-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* link card behavior */
+a.cm-aff-card { text-decoration: none; }
+a.cm-aff-card:hover .cm-aff-name { color: var(--orange-yellow-crayola); }
+
 .cm-aff-info { flex: 1; min-width: 0; }
 .cm-aff-name {
   color: var(--white-2);
