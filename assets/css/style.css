@@ -2822,15 +2822,37 @@ a.cm-aff-card:hover .cm-aff-name { color: var(--orange-yellow-crayola); }
   margin-top: 1px;
 }
 
-/* mobile: stack list columns so things fit */
+/* country badge in top-right corner of each tag */
+.cm-tag { padding-top: 14px; padding-right: 70px; }
+
+.cm-tag-flag {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: inline-flex;
+  align-items: center;
+  background: var(--eerie-black-2);
+  border: 1px solid var(--jet);
+  border-radius: 5px;
+  padding: 2px 8px;
+  font-size: 10px;
+  font-weight: var(--fw-500);
+  color: var(--light-gray-70);
+  letter-spacing: 0.3px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+.cm-tag:hover .cm-tag-flag {
+  border-color: var(--vegas-gold);
+  color: var(--white-2);
+}
+
+/* mobile: drop the badge above the role label */
 @media (max-width: 579px) {
-  .cm-list-item {
-    grid-template-columns: 1fr;
-    gap: 3px;
-    padding: 10px 0;
-  }
-  .cm-when {
-    justify-self: start;
-    margin-top: 2px;
+  .cm-tag { padding-right: 14px; }
+  .cm-tag-flag {
+    position: static;
+    align-self: flex-start;
+    margin-bottom: 4px;
   }
 }
