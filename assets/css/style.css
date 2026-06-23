@@ -2653,23 +2653,23 @@ textarea.form-input::-webkit-resizer { display: none; }
 .cm-aff-card:hover { transform: translateY(-2px); }
 
 .cm-aff-logo {
-  flex: 0 0 56px;
-  width: 56px;
-  height: 56px;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
   background: var(--white-2);
-  border-radius: 10px;
-  padding: 6px;
+  border-radius: 8px;
+  padding: 5px;
   overflow: hidden;
   box-sizing: border-box;
 }
 .cm-aff-logo img {
   width: 100%;
   height: 100%;
-  max-width: 44px;
-  max-height: 44px;
+  max-width: 34px;
+  max-height: 34px;
   object-fit: contain;
   display: block;
 }
@@ -2847,12 +2847,28 @@ a.cm-aff-card:hover .cm-aff-name { color: var(--orange-yellow-crayola); }
   color: var(--white-2);
 }
 
-/* mobile: drop the badge above the role label */
+/* mobile: stack list columns so things fit */
 @media (max-width: 579px) {
-  .cm-tag { padding-right: 14px; }
+  .cm-list-item {
+    grid-template-columns: 1fr;
+    gap: 3px;
+    padding: 10px 0;
+  }
+  .cm-when {
+    justify-self: start;
+    margin-top: 2px;
+  }
+
+  /* keep badge in top-right on mobile too, just smaller */
+  .cm-tag {
+    padding-top: 12px;
+    padding-right: 50px;
+  }
   .cm-tag-flag {
-    position: static;
-    align-self: flex-start;
-    margin-bottom: 4px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 10px;
+    padding: 1px 6px;
   }
 }
