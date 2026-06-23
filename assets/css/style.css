@@ -2331,6 +2331,16 @@ textarea.form-input::-webkit-resizer { display: none; }
   margin-top: 2px;
 }
 
+/* multi-line year pill (for date ranges) */
+.rec-item-year-range {
+  height: auto;
+  min-height: 24px;
+  padding: 4px 10px;
+  line-height: 1.2;
+  text-align: center;
+  flex-direction: column;
+}
+
 .rec-item-body { flex: 1; min-width: 0; }
 
 .rec-item-title {
