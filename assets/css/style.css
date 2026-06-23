@@ -2827,7 +2827,7 @@ a.cm-aff-card:hover .cm-aff-name { color: var(--orange-yellow-crayola); }
 
 .cm-tag-flag {
   position: absolute;
-  top: 8px;
+  top: 14px;
   right: 8px;
   display: inline-flex;
   align-items: center;
