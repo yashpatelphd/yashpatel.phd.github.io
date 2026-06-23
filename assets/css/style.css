@@ -2615,3 +2615,43 @@ textarea.form-input::-webkit-resizer { display: none; }
   border-color: var(--vegas-gold);
   font-weight: var(--fw-600);
 }
+
+/*-----------------------------------*\
+  #COMMUNITY — compact single-line rows
+\*-----------------------------------*/
+
+.com-row-compact {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 16px;
+}
+.com-row-compact .com-row-title {
+  flex: 1;
+  min-width: 0;
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+  color: var(--white-2);
+  line-height: 1.4;
+}
+.com-row-compact .com-row-period {
+  flex-shrink: 0;
+  color: var(--vegas-gold);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-500);
+  white-space: nowrap;
+}
+
+/* mobile: stack on small screens so long titles don't get crushed */
+@media (max-width: 579px) {
+  .com-row-compact {
+    flex-direction: column !important;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .com-row-compact .com-row-period {
+    font-size: var(--fs-8);
+  }
+}
