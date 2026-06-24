@@ -3006,7 +3006,6 @@ a.cm-aff-card:hover .cm-aff-name { color: var(--orange-yellow-crayola); }
 }
 .talk-session-label {
   display: inline;
-  color: var(--vegas-gold);
   font-style: normal;
   font-weight: var(--fw-500);
 }
