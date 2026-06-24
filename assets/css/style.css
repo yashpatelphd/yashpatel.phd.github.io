@@ -2297,6 +2297,8 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 /* Research focus cards — keep icon-left layout on mobile too */
 @media (max-width: 579px) {
+  .doc-btn-row { margin-bottom: 26px; }
+
   .service-item {
     display: flex;
     justify-content: flex-start;
