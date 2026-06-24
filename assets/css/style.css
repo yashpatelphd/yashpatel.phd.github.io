@@ -2992,6 +2992,7 @@ a.cm-aff-card:hover .cm-aff-name { color: var(--orange-yellow-crayola); }
   margin-bottom: 3px;
 }
 .talk-audience {
+  display: inline;
   color: var(--orange-yellow-crayola);
   font-weight: var(--fw-500);
 }
@@ -3002,6 +3003,12 @@ a.cm-aff-card:hover .cm-aff-name { color: var(--orange-yellow-crayola); }
   font-weight: var(--fw-300);
   font-style: italic;
   line-height: 1.5;
+}
+.talk-session-label {
+  display: inline;
+  color: var(--vegas-gold);
+  font-style: normal;
+  font-weight: var(--fw-500);
 }
 
 .talk-date {
