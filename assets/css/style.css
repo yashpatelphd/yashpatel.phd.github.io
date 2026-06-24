@@ -2714,16 +2714,31 @@ a.cm-aff-card:hover .cm-aff-name { color: var(--orange-yellow-crayola); }
   color: var(--white-2);
 }
 
-/* mobile: stack list columns so things fit */
+/* mobile: role label on top, venue + date share the line below */
 @media (max-width: 579px) {
   .cm-list-item {
-    grid-template-columns: 1fr;
-    gap: 3px;
-    padding: 10px 0;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "role role"
+      "venue when";
+    column-gap: 12px;
+    row-gap: 4px;
+    align-items: baseline;
+    padding: 11px 0;
+  }
+  .cm-role {
+    grid-area: role;
+    margin-bottom: 1px;
+  }
+  .cm-venue {
+    grid-area: venue;
+    min-width: 0;
   }
   .cm-when {
-    justify-self: start;
-    margin-top: 2px;
+    grid-area: when;
+    justify-self: end;
+    white-space: nowrap;
+    margin-top: 0;
   }
 
   /* keep badge in top-right on mobile too, just smaller */
