@@ -589,8 +589,8 @@ main {
 }
 
 .service-item-text {
-  color: var(--light-gray);
-  font-size: var(--fs-7);
+  color: var(--light-gray-70);
+  font-size: 13px;
   font-weight: var(--fw-300);
   line-height: 1.5;
 }
