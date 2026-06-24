@@ -583,8 +583,9 @@ main {
 .service-content-box { text-align: center; }
 
 .service-item-title {
-  font-size: var(--fs-5);
-  margin-bottom: 5px;
+  font-size: var(--fs-6);
+  line-height: 1.25;
+  margin-bottom: 4px;
 }
 
 .service-item-text {
@@ -1432,13 +1433,13 @@ textarea.form-input::-webkit-resizer { display: none; }
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 14px;
-    padding: 18px 20px;
+    gap: 12px;
+    padding: 16px 18px;
   }
 
   .service-icon-box {
     margin-bottom: 0;
-    margin-top: 1px;
+    margin-top: 0;
   }
 
   .service-content-box { text-align: left; }
